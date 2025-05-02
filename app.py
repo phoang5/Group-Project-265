@@ -1,5 +1,6 @@
 import streamlit as st
 from models.calorie_predictor import estimate_calories
+from models.exercise_recommender import recommend_exercises
 
 st.set_page_config(page_title="Fitness App Beta", layout="centered")
 st.title("🔥 FitPlan: Calorie & Workout Planner")
@@ -16,7 +17,7 @@ target_weight = st.sidebar.slider("Target Weight (kg)", 30, 200)
 goal = st.sidebar.selectbox("Fitness Goal", ["Lose Weight", "Gain Muscle", "Maintain Fitness"])
 activity_level = st.sidebar.selectbox("Activity Level", ["Sedentary", "Lightly Active", "Active", "Very Active"])
 
-# --- Prediction Trigger ---
+# --- Generate Plan ---
 if st.sidebar.button("Generate Plan"):
     st.subheader(f"Hello, {name or 'User'} 👋")
     st.markdown(f"🍒 **Fitness Goal:** {goal}")
@@ -25,6 +26,14 @@ if st.sidebar.button("Generate Plan"):
     # Use target weight unless goal is maintenance
     adjusted_weight = target_weight if goal != "Maintain Fitness" else weight
 
+    # Estimate calories using formula
     ideal_cal = estimate_calories(age, gender, adjusted_weight, height, activity_level, goal)
 
     st.success(f"🔥 Your ideal daily calorie intake to reach **{target_weight}kg** is: **{ideal_cal} kcal**")
+
+    # --- Recommended Workouts ---
+    st.subheader("🏋️ Recommended Workouts")
+    recommendations = recommend_exercises(ideal_cal, adjusted_weight)
+
+    for _, row in recommendations.iterrows():
+        st.write(f"✅ {row['Exercise or Sport (1 hour)']} — burns approx **{int(row['Estimated Burn'])} kcal/hr**")
