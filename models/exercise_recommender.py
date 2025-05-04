@@ -1,20 +1,36 @@
 import pandas as pd
 
-def recommend_exercises(calorie_target, weight_kg, num_exercises=5):
+def recommend_exercises(calorie_target, weight_kg):
     try:
-        # Load the exercise dataset
-        df = pd.read_csv("data/exercise_dataset.csv")
+        df = pd.read_csv("data/EXCERCISE.csv")
+        print("🧾 Columns after loading:", df.columns.tolist())
 
-        # Calculate estimated calories burned for the user's weight
+        df.columns = df.columns.str.strip()
+        df.rename(columns={"Activity, Exercise or Sport (1 hour)": "Exercise", "Type": "Type"}, inplace=True)
+
         df["Estimated Burn"] = df["Calories per kg"] * weight_kg
-
-        # Find the closest matches to the calorie target
         df["Calorie Gap"] = abs(df["Estimated Burn"] - calorie_target)
+
         sorted_df = df.sort_values("Calorie Gap")
 
-        # Return the top N matches
-        return sorted_df[["Exercise or Sport (1 hour)", "Estimated Burn"]].head(num_exercises)
+        gym_mask = df["Type"].str.upper().str.strip() == "GYM"
+        sport_mask = df["Type"].str.upper().str.contains("SPORT", na=False)  # Substring match
+
+        gym_df = sorted_df[gym_mask].copy()
+        sport_df = sorted_df[sport_mask].copy()
+
+        print("✅ Final GYM columns:", gym_df.columns.tolist())
+        print("✅ Final SPORT columns:", sport_df.columns.tolist())
+
+        print("🔍 GYM DataFrame preview:")
+        print(gym_df.head())
+
+        print("🔍 SPORT DataFrame preview:")
+        print(sport_df.head())
+
+        # Limit to top 7 results
+        return gym_df.head(7)[["Exercise", "Estimated Burn"]], sport_df.head(7)[["Exercise", "Estimated Burn"]]
 
     except Exception as e:
-        return pd.DataFrame({"Error": [str(e)]})
-
+        print("🚨 Error in recommend_exercises:", str(e))
+        return pd.DataFrame(), pd.DataFrame()

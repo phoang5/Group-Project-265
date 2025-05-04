@@ -1,0 +1,53 @@
+"Activity, Exercise or Sport (1 hour)",Type ,130 lb,155 lb,180 lb,205 lb,Calories per kg
+"Stationary cycling, very light",GYM,177,211,245,279,0.61742672
+"Stationary cycling, light",GYM,325,387,449,512,1.13262599
+"Stationary cycling, moderate",GYM,413,493,572,651,1.44133936
+"Stationary cycling, vigorous",GYM,620,739,858,977,2.16234753
+"Stationary cycling, very vigorous",GYM,738,880,1022,1163,2.57464235
+"Calisthenics, vigorous, pushups, situps‚Ä¶",GYM,472,563,654,745,1.64782527
+"Calisthenics, light",GYM,207,246,286,326,0.72100818
+"Circuit training, minimal rest",GYM,472,563,654,745,1.64782527
+"Weight lifting, body building, vigorous",GYM,354,422,490,558,1.23485344
+"Weight lifting, light workout",GYM,177,211,245,279,0.61742672
+Health club exercise,GYM,325,387,449,512,1.13262599
+Stair machine,GYM,531,633,735,838,1.85295717
+"Rowing machine, light",GYM,207,246,286,326,0.72100818
+"Rowing machine, moderate",GYM,413,493,572,651,1.44133936
+"Rowing machine, vigorous",GYM,502,598,695,791,1.75072972
+"Rowing machine, very vigorous",GYM,708,844,981,1117,2.4710609
+Ski machine,GYM,413,493,572,651,1.44133936
+"Aerobics, low impact",GYM,295,352,409,465,1.02972154
+"Aerobics, high impact",GYM,413,493,572,651,1.44133936
+"Aerobics, step aerobics",GYM,502,598,695,791,1.75072972
+"Aerobics, general",GYM,384,457,531,605,1.3384349
+"Running, 5 mph (12 minute mile)",GYM,472,563,654,745,1.64782527
+"Running, 5.2 mph (11.5 minute mile)",GYM,531,633,735,838,1.85295717
+"Running, 6 mph (10 min mile)",GYM,590,704,817,931,2.05944308
+"Running, 6.7 mph (9 min mile)",GYM,649,774,899,1024,2.26525199
+"Running, 7 mph (8.5 min mile)",GYM,679,809,940,1070,2.36815644
+"Running, 7.5mph (8 min mile)",GYM,738,880,1022,1163,2.57464235
+"Running, 8 mph (7.5 min mile)",GYM,797,950,1103,1256,2.77977426
+"Running, 8.6 mph (7 min mile)",GYM,826,985,1144,1303,2.88267871
+"Running, 9 mph (6.5 min mile)",GYM,885,1056,1226,1396,3.08916462
+"Running, 10 mph (6 min mile)",GYM,944,1126,1308,1489,3.29497353
+"Running, 10.9 mph (5.5 min mile)",GYM,1062,1267,1471,1675,3.70659134
+"Jumping rope, fast",GYM,708,844,981,1117,2.4710609
+"Jumping rope, moderate",GYM,590,704,817,931,2.05944308
+"Jumping rope, slow",GYM,472,563,654,745,1.64782527
+"Walking 2.0 mph, slow",GYM,148,176,204,233,0.51519927
+Walking 2.5 mph,GYM,177,211,245,279,0.61742672
+"Walking 3.0 mph, moderate",GYM,195,232,270,307,0.679711
+"Walking 3.5 mph, brisk pace",GYM,224,267,311,354,0.78261545
+"Walking 3.5 mph, uphill",GYM,354,422,490,558,1.23485344
+"Walking 4.0 mph, very brisk",GYM,295,352,409,465,1.02972154
+Walking 4.5 mph,GYM,372,443,515,586,1.29713772
+Walking 5.0 mph,GYM,472,563,654,745,1.64782527
+Badminton,Sports,266,317,368,419,0.92749409
+"Swimming laps, freestyle, fast",Sports,590,704,817,931,2.05944308
+"Swimming laps, freestyle, slow",Sports,413,493,572,651,1.44133936
+Gymnastics,Sports,236,281,327,372,0.82323563
+"Football, competitive",Sports,531,633,735,838,1.85295717
+Playing paddleball,Sports,354,422,490,558,1.23485344
+"Table tennis, ping pong",Sports,236,281,327,372,0.82323563
+Playing tennis,Sports,413,493,572,651,1.44133936
+Wallyball,Sports,413,493,572,651,1.44133936
